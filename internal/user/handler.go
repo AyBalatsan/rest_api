@@ -16,11 +16,11 @@ const (
 )
 
 type handler struct {
-	logger logging.Logger
+	logger *logging.Logger
 }
 
 // отдаем ссылку на структуру в интерфейсе
-func NewHandler(logger logging.Logger) hendlers.Handler {
+func NewHandler(logger *logging.Logger) hendlers.Handler {
 	return &handler{
 		logger: logger,
 	}
