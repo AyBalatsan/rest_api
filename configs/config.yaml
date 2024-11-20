@@ -1,0 +1,23 @@
+server:
+  host: localhost
+  port: 8000
+  
+database:
+  host: localhost
+  username: postgres
+  password: qwer123
+  dbname: golang
+  port: 5432
+  sslmode: disable
+  # docker run --name=todo_db -e POSTGRES_PASSWORD='qwerty' -p 5432 -d --rm postgres запуск посгри с найстройками
+  # migrate create -ext sql -dir ./schema -seq init установка схем для миграции
+  # migrate -source file://schema -database "postgresql://postgres:qwerty@localhost:5436/todo_db?sslmode=disable" -verbose up запуск пиграции по верхней схеме
+  # docker exec -it c4302bb79320 bin/bash для подключению к контейнеру
+  # psql -U postgres
+  # migrate -path ./schema -database 'postgresql://postgres:qwer123@localhost:5432/golang?sslmode=disable' -verbose up
+  # migrate -path ./schema -database 'postgresql://postgres:qwer123@localhost:5432/golang?sslmode=disable' -verbose down
+# POSTGRES_USER="postgres"
+# POSTGRES_HOST="localhost"
+# POSTGRES_PORT="5432"
+# POSTGRES_PASSWORD="qwer123"
+# POSTGRES_DB="golang"

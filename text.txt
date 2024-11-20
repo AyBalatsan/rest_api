@@ -1,0 +1,13 @@
+
+// Get using this DB.
+// Any placeholder parameters are replaced with supplied args.
+// An error is returned if the result set is empty.
+func (db *DB) Get(dest interface{}, query string, args ...interface{}) error {
+	return Get(db, dest, query, args...)
+}
+
+// Select using this DB.
+// Any placeholder parameters are replaced with supplied args.
+func (db *DB) Select(dest interface{}, query string, args ...interface{}) error {
+	return Select(db, dest, query, args...)
+}
